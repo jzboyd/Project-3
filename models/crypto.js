@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const cryptoSchema = new.mongoose.Schema ({
+const cryptoSchema = new mongoose.Schema ({
   name: String,
   image: String,
   description: String
