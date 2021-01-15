@@ -82,7 +82,20 @@ class App extends React.Component {
       {this.state.cryptos.map((crypto) => {
         return(
           <li>
-          <p id="cryptoname>"
+          <p id="cryptoname">{crypto.name}</p>
+          <br />
+
+          <p id="cryptodescription">{crypto.description}</p>
+
+          <img src={crypto.image} alt={crypto.name} />
+          <br />
+
+          <button value={crypto._id} onClick={this.deleteCrypto}>DELETE</button>
+          <br />
+
+          <details>
+          <summary>Edit this Crypto</summary>
+          <form id={crypto._id} onSubmit={this.updateCrypto}>
         )
       })}
     )
