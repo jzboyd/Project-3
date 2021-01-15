@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //CONTROLLER
-
+const cryptoController = require('./controllers/crypto_controller.js')
+app.use('/crypto', cryptoController)
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
