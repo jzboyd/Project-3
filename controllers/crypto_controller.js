@@ -1,7 +1,7 @@
 const express = require('express')
 const cryptos = express.Router()
 
-const Crypto = require('..models/crypto.js')
+const Crypto = require('../models/crypto.js')
 
 cryptos.get('/', (req, res) => {
   Crypto.find({}, (error, foundCrypto) => {
@@ -48,4 +48,4 @@ cryptos.delete('/:id', (req, res) => {
   })
 })
 
-module.exports = crypto
+module.exports = cryptos
