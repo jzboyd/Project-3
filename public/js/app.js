@@ -15,7 +15,7 @@ class App extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     axios
-    .post('/cryptos', this.state)
+    .post('/crypto', this.state)
     .then((response) => {
       this.setState({
         cryptos: response.data,
@@ -28,7 +28,7 @@ class App extends React.Component {
 
   deleteCrypto = (event) => {
     axios
-    .delete('/cryptos/' + event.target.value)
+    .delete('/crypto/' + event.target.value)
     .then((response) => {
       this.setState({
         cryptos: response.data,
@@ -40,7 +40,7 @@ class App extends React.Component {
     event.preventDefault()
     const id = event.target.id
     axios
-    .put('/cryptos/' + id, this.state)
+    .put('/crypto/' + id, this.state)
     .then((response) => {
       this.setState({
         cryptos: response.data,
@@ -52,7 +52,7 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    axios.get('/cryptos').then((response) => {
+    axios.get('/crypto').then((response) => {
       this.setState({
         cryptos: response.data
       })
@@ -96,8 +96,33 @@ class App extends React.Component {
           <details>
           <summary>Edit this Crypto</summary>
           <form id={crypto._id} onSubmit={this.updateCrypto}>
+          <label htmlFor="name">Name</label>
+
+          <br />
+          <input type="text" id="name" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="image">Image</label>
+          <br />
+          <input type="text" id="image" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="description">Description</label>
+          <br />
+          <input type="text" id="description" onChange={this.handleChange} />
+          <br />
+          <input id="updatebtn" type="submit" value="Update Crypto" />
+          </form>
+          </details>
+          </li>
         )
       })}
+      </ul>
+      </div>
+      </div>
     )
   }
 }
+
+ReactDOM.render(
+  <App></App>,
+  document.querySelector('main')
+)
