@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "14.15.0"
-  }
+  },
   "description": "By James & Joel",
   "main": "server.js",
   "scripts": {
