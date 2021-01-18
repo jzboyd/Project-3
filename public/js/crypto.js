@@ -141,16 +141,18 @@ class App extends React.Component {
                   <h2 class="display-5">
 
                   <p id="cryptoname">{crypto.name}</p></h2>
+                  <img src={crypto.image} alt={crypto.name} />
 
                 </div>
           <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
         <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
 
+
             <div class="bg-white shadow-sm mx-auto" style={{ width: "80%", height: "300px", borderRadius: "21px 21px 0 0"}}>
 
-<br />
 
-            <img src={crypto.image} alt={crypto.name} />
+
+
 <br />
           <p id="cryptodescription">{crypto.description}</p>
           </div>
