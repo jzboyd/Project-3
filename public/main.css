@@ -1,0 +1,50 @@
+
+<<<<<<< HEAD
+=======
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: grey;
+}
+.site-header a {
+  color: white;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+.position-relative.me-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden{
+  background-image: url("");
+}
+
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+@media (min-width: 768px)
+.me-md-3 {
+  margin: 0 !important;
+}
+>>>>>>> ef9651fb72e03a34bcdfcf9480b6407910cec653
