@@ -24,12 +24,12 @@ ul {
 
 }
 
+
+
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
-.position-relative.me-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden{
-  background-image: url("");
-}
+
 
 
 .flex-equal > * {
@@ -44,4 +44,11 @@ ul {
 @media (min-width: 768px)
 .me-md-3 {
   margin: 0 !important;
+}
+
+
+.twitter-tweet {
+
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
