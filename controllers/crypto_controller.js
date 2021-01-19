@@ -21,7 +21,7 @@ cryptos.post('/', (req,res) => {
 
 // update
 
-cryptos.put('/', (req, res) => {
+cryptos.put('/:id', (req, res) => {
   Crypto.findByIdAndUpdate(
     req.params.id,
     req.body,
