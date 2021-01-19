@@ -51,6 +51,7 @@ class App extends React.Component {
     })
   }
 
+
   componentDidMount = () => {
     axios.get('/crypto').then((response) => {
       this.setState({
@@ -96,31 +97,66 @@ class App extends React.Component {
 
       <div class="position-relative me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
 
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 fw-normal">Crypto Currency</h1>
-          <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-          <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-        </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">One word: Doge</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1340590280848908288?ref_src=twsrc%5Etfw">December 20, 2020</a></blockquote>
+
+    </div>
+
+    <div class="carousel-item">
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A Dogecoin is man’s best friend</p>&mdash; Cameron Winklevoss (@cameron) <a href="https://twitter.com/cameron/status/1284495510972268550?ref_src=twsrc%5Etfw">July 18, 2020</a></blockquote>
+    </div>
+    <div class="carousel-item">
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It’s inevitable <a href="https://t.co/eBKnQm6QyF">pic.twitter.com/eBKnQm6QyF</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1284291528328790016?ref_src=twsrc%5Etfw">July 18, 2020</a></blockquote>
+    </div>
+    <div class="carousel-item">
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Watching the cryptos trade, it’s EXACTLY like the internet stock bubble. EXACTLY. I think btc, eth , a few others will be analogous to those that were built during the dot-com era, survived the bubble bursting and thrived, like AMZN, EBay, and Priceline. Many won’t</p>&mdash; Mark Cuban (@mcuban) <a href="https://twitter.com/mcuban/status/1348663730712834056?ref_src=twsrc%5Etfw">January 11, 2021</a></blockquote>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
 
       </div>
 
 
 
       <div id="cryptolist">
-      <ul>
+
       {this.state.cryptos.map((crypto) => {
         return(
 
+
+          < div class = "d-md-flex flex-md-equal w-100 my-md-3 ps-md-3" >
+              <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
+                <div class="my-3 py-3">
+                  <h2 class="display-5">
+
+                  <p id="cryptoname">{crypto.name}</p></h2>
+                  <img src={crypto.image} alt={crypto.name} />
+
+                </div>
           <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
         <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
 
+
             <div class="bg-white shadow-sm mx-auto" style={{ width: "80%", height: "300px", borderRadius: "21px 21px 0 0"}}>
-            <p id="cryptoname">{crypto.name}</p>
-
-            <img src={crypto.image} alt={crypto.name} />
 
 
+
+
+<br />
           <p id="cryptodescription">{crypto.description}</p>
+          </div>
+          </div>
           </div>
 
 
@@ -162,14 +198,42 @@ class App extends React.Component {
         )
 
       })}
-      </ul>
+
       </div>
+      <footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="/images/cryptocurrency-logo.png" alt="" width="80" height="80" class="d-inline-block align-center"></img>
+
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Bitcoin</a></li>
+        <li><a class="link-secondary" href="#">Ethereum</a></li>
+        <li><a class="link-secondary" href="#">Dogecoin</a></li>
+        <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Team</a></li>
+        <li><a class="link-secondary" href="#">Locations</a></li>
+        <li><a class="link-secondary" href="#">Privacy</a></li>
+        <li><a class="link-secondary" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
       </div>
 
 
     )
 
   }
+
 }
 
 
