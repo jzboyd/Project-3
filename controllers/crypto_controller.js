@@ -42,9 +42,9 @@ cryptos.put('/', (req, res) => {
 
 cryptos.delete('/:id', (req, res) => {
   Crypto.findByIdAndRemove(req.params.id, (error, deletedCrypto) => {
-    Crypto.find({}), (error, foundCrypto) => {
+    Crypto.find({}, (error, foundCrypto) => {
       res.json(foundCrypto)
-    }
+    })
   })
 })
 
